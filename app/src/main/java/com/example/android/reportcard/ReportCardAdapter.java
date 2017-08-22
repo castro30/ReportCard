@@ -54,21 +54,21 @@ public class ReportCardAdapter extends ArrayAdapter<ReportCard>{
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.item_list, parent,false);
         }
 
-        // Get the {@link Word} object located at this position in the list
+        // Get the {@link currentSubject} object located at this position in the list
         ReportCard currentSubject = getItem(position);
 
-        // Find the TextView in the list_item.xml layout with the ID english_text_view
+        // Find the TextView in the list_item.xml layout with the ID subject_text_view
         TextView subjectTextName = (TextView) listItemView.findViewById(R.id.subject_text_view);
-        // Get the english name from the current word object
+        // Get the subject name from the current object
         // and set this as the TextView
         subjectTextName.setText(currentSubject.getSubject());
 
-        // Get the {@link Word} object located at this position in the list
+        // Get the {@link currentGrade} object located at this position in the list
         ReportCard currentGrade = getItem(position);
 
-        // Find the TextView in the list_item.xml layout with the ID miwok_text_view
+        // Find the TextView in the list_item.xml layout with the ID grade_text_view
         TextView gradeTextName = (TextView) listItemView.findViewById(R.id.grade_text_view);
-        // Get the miwok name from the current word object
+        // Get the grade from the current object
         // and set this as the TextView
 
 

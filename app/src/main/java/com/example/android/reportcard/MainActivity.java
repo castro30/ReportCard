@@ -17,13 +17,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ArrayList<ReportCard> johnDoeGradeArray= new ArrayList<ReportCard>();
+        ArrayList<ReportCard> GradeArray= new ArrayList<ReportCard>();
 
-        johnDoeGradeArray.add(new ReportCard("History",95.0));
-        johnDoeGradeArray.add(new ReportCard("Math",95.3));
-        johnDoeGradeArray.add(new ReportCard("Chemistry",100.0));
-        johnDoeGradeArray.add(new ReportCard("Social Studies",88.9));
-        johnDoeGradeArray.add(new ReportCard("French",90.0));
+        GradeArray.add(new ReportCard("History",95.0));
+        GradeArray.add(new ReportCard("Math",95.3));
+        GradeArray.add(new ReportCard("Chemistry",100.0));
+        GradeArray.add(new ReportCard("Social Studies",88.9));
+        GradeArray.add(new ReportCard("French",90.0));
 
 
 
@@ -32,10 +32,8 @@ public class MainActivity extends AppCompatActivity {
 //        // adapter knows how to create layout for each item in the list, using the
 //        //simple_list_item_1.xml layout resource defined in the Android framework.
 //        // This list item layout contains a single {@link TextView}, which the adapter will set to
-//        // display a single word
-//        // WordAdapter<Word> adapter = new WordAdapter(this, numberArray);
-        ReportCardAdapter adapter = new ReportCardAdapter(this,johnDoeGradeArray);
-//        ArrayAdapter card = new ArrayAdapter(this, android.R.layout.simple_list_item_1,johnDoeGradeArray);
+//        // display a single object
+        ReportCardAdapter adapter = new ReportCardAdapter(this,GradeArray);
 //
 //        // Find the {@link ListView} object in a view heirarchy of the {@link Activity}.
 //        // There should be a {@link ListView} with the view ID called list, which is declared in
@@ -43,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         ListView listView = (ListView) findViewById(R.id.list);
 //
 //        // Make the [@link ListView} use the {@link ArrayAdapter} we created above, so that the
-//        // {@link ListView} will display array items for each word in the list of numberArray.
+//        // {@link ListView} will display array items for each word in the list of GradeArray.
 //        // Do this by calling the set adapter method on the {@link ListView} object and pass in
 //        // 1 argument which is the {@link ArrayAdapter} with the variable name itemsAdapter.
         listView.setAdapter(adapter);
